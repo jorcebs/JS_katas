@@ -1,0 +1,30 @@
+<script>
+
+	// 5.Números amigos
+
+	let a = prompt('Escriba el primer número');
+	let b = prompt('Escriba el segundo número');
+	let x = 0; // sumatoria de los divisores de a
+	let y = 0; // sumatoria de los divisores de b
+	let c = 0;
+
+	while (c < a - 1) {
+		c++;
+		if (a % c == 0)
+			x += c;
+	}
+
+	c = 0;
+
+	while (c < b - 1) {
+		c++;
+		if (b % c == 0)
+			y += c;
+	}
+
+	if (x == b || y == a)
+		document.write('Los números ' + a + ' y ' + b + ' SON números AMIGOS');
+	else
+		document.write('Los números ' + a + ' y ' + b + ' NO SON números AMIGOS');
+
+</script>

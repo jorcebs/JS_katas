@@ -1,0 +1,45 @@
+<script>
+
+	// 7.Que ordene el arreglo de menor a mayor
+
+	let arreglo = [];
+	let c, x, y, z;
+	c = x = y = z = 0;
+
+	while (c < 5) {
+		arreglo[c] = prompt('Ingrese un número');
+		c++;
+	}
+
+	c = 0;
+
+	while (c < 5) {
+
+		while (y < 5) {
+
+			if (parseInt(arreglo[x]) > parseInt(arreglo[y])) {
+				z = arreglo[x];
+				arreglo[x] = arreglo[y];
+				arreglo[y] = z;
+			}
+
+			x++;
+			y = x + 1;
+
+		}
+
+		x = 0;
+		y = x + 1;
+		c++;
+
+	}
+
+	c = 0;
+	document.write('El arreglo ordenado es:' + '<br/>');
+	
+	while (c < 5) {
+		document.write(arreglo[c] + '<br/>');
+		c++;
+	}
+
+</script>

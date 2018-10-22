@@ -1,0 +1,33 @@
+<script>
+
+	// 8. Que pida una cadena de paréntesis y determinar si está balanceado o no
+
+	let x = prompt('Escriba los parentesis');
+	let y = 0;
+	let z = 0;
+	let hola = 0;
+
+	if (x.charAt(0) == '(' && x.charAt(x.length - 1) == ')')
+		y++;
+
+	for (var c = 0; c < x.length; c++) {
+		if (x.charAt(c) == '(')
+			z++;
+		if (x.charAt(c) == ')')
+			z--;
+		if (z < 0)
+			hola--;
+	}
+
+	if (z == 0)
+		y++;
+
+	if (hola == 0)
+		y++;
+
+	if (y == 3)
+		document.write(x + ' ESTÁ BALANCEADO');
+	else
+		document.write(x + ' NO ESTÁ BALANCEADO');
+
+</script>

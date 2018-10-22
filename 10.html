@@ -1,0 +1,48 @@
+<script>
+
+	// 10. Que lea una frase y regrese al revés las palabras que sean mayor de 5 caracteres
+
+	let frase = prompt('Ingrese una frase');
+	let arreglo = [];
+	let x = 0;
+
+	for (let c = 0; c < frase.length; c++) {
+		if (frase.charAt(c) == ' ')
+			x++;
+	}
+
+	while (x > -1) {
+		arreglo[x] = '';
+		x--;
+	}
+
+	x = 0;
+
+	for (c = 0; c < frase.length; c++) {
+
+		if (frase.charAt(c) == ' ')
+			x++;
+		else
+			arreglo[x] += frase.charAt(c);
+
+	}
+
+	let palabra_inv = '';
+
+	for (c = 0; c < arreglo.length; c++) {
+
+		if (arreglo[c].length > 5) {
+
+			for (let y = arreglo[c].length - 1; y > -1; y--)
+				palabra_inv += arreglo[c].charAt(y);
+
+			arreglo[c] = palabra_inv;
+			palabra_inv = '';
+
+		}
+	}
+
+	for (c = 0; c < arreglo.length; c++)
+		document.write(arreglo[c] + ' ');
+
+</script>

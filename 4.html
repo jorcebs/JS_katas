@@ -1,0 +1,21 @@
+<script>
+
+	// 4.Que imprima los primeros 5 números de la sucesión de fibonacci (cada término es la suma de los dos anteriores)
+
+	let x = 1;
+	let y = 1;
+	let z = 0;
+	let c = 0;
+
+	document.write(x + '<br/>');
+	document.write(y + '<br/>');
+
+	while (c < 3) {
+		c++;
+		z = x + y;
+		x = y;
+		y = z;
+		document.write(z + '<br/>');
+	}
+
+</script>

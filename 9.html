@@ -1,0 +1,19 @@
+<script>
+
+	// 9. Palindromo
+
+	let frase = prompt('Escriba una frase').toLowerCase();
+	let frase_inv = '';
+
+	for (var c = 0; c < frase.length; c++)
+		frase = frase.replace(' ', '').replace('á', 'a').replace('é', 'e').replace('í', 'i').replace('ó', 'o').replace('ú', 'u');
+
+	for (var x = frase.length - 1; x > -1; x--)
+		frase_inv += frase.charAt(x);
+
+	if (frase == frase_inv)
+		document.write('ES un palindromo');
+	else
+		document.write('NO ES un palindromo');
+
+</script>
